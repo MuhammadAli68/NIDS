@@ -2,10 +2,16 @@ import pickle
 import pandas as pd
 import sys
 import json
+import os
+import gdown
 
 rand_forest = pickle.load(open('rand_forest.pkl', 'rb'))
 index = sys.argv[1]
 index = int(index)
+
+isExist = os.path.exists('threats.csv')
+if(isExist == False):
+    gdown.download('https://drive.google.com/uc?export=download&id=1Kxhy40FJBqTi0D6g9CpmBEx1jHOqu0Zs',output='threats.csv',quiet=False)
 
 def randforest(index):
     threats = pd.read_csv('threats.csv')

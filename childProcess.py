@@ -1,11 +1,11 @@
 import pickle
-import pandas as pd
 import sys
 import json
+import os
 
 sys.path.append('/usr/local/lib/python3.9/dist-packages')
 
-import os
+import pandas as pd
 import gdown
 
 rand_forest = pickle.load(open('rand_forest.pkl', 'rb'))

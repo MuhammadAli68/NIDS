@@ -8,7 +8,7 @@ app.get("/NIDS",(req,res)=>{
     Math.random() * (413484 - 1) + 1
   );
   let pythonOutput = '';
-  const pythonProcess = spawn('python3',['childProcess.py',index]);
+  const pythonProcess = spawn('python3.9',['childProcess.py',index]);
 
   pythonProcess.stdout.on('data', (data) => {
      console.log(`stdout: ${data}`);

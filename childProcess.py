@@ -2,6 +2,9 @@ import pickle
 import pandas as pd
 import sys
 import json
+
+sys.path.append('/usr/local/lib/python3.9/dist-packages')
+
 import os
 import gdown
 
